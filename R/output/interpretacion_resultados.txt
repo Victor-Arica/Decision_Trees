@@ -1,0 +1,42 @@
+INTERPRETACIÓN DE RESULTADOS - ANÁLISIS DE ENFERMEDAD CARDÍACA
+================================================================
+
+1. LIMPIEZA DE DATOS:
+- Dataset original: 303 observaciones con 14 variables
+- Después de limpieza: 297 observaciones (6 filas eliminadas por NAs)
+- Distribución enfermedad cardíaca: 137 casos positivos (46.1%) vs 160 casos negativos (53.9%)
+
+2. ÁRBOL DE CLASIFICACIÓN INICIAL:
+- Precisión inicial: 75.6%
+- Sensibilidad (detectar enfermos): 72.3%
+- Especificidad (detectar sanos): 79.1%
+- Árbol complejo con posible sobreajuste a datos de entrenamiento
+
+3. SELECCIÓN DE PARÁMETRO ÓPTIMO:
+- Alpha óptimo seleccionado: 4.5e-05
+- Validación cruzada con 50 valores de alpha en escala logarítmica
+- Gráfica muestra relación entre complejidad (alpha) y error
+
+4. ÁRBOL DE CLASIFICACIÓN ÓPTIMO:
+- Precisión óptima: 75.6%
+- Sensibilidad óptima: 72.3%
+- Especificidad óptima: 79.1%
+- Árbol simplificado que generaliza mejor a nuevos datos
+
+5. COMPARACIÓN Y CONCLUSIONES:
+- Cambio en precisión: 0% puntos
+- Cambio en sensibilidad: 0% puntos
+- Cambio en especificidad: 0% puntos
+
+6. VARIABLES MÁS IMPORTANTES:
+- Edad (age): Principal divisor en árbol de decisión
+- Tipo de dolor pecho (cp): Indicador clave de problemas cardíacos
+- Número de vasos (ca): Mayor número indica mayor riesgo
+- Angina por ejercicio (exang): Síntoma predictor importante
+- Resultado thallium (thal): Prueba diagnóstica fundamental
+
+7. RECOMENDACIONES CLÍNICAS:
+- Pacientes >56 años con dolor atípico y angina por ejercicio tienen alto riesgo
+- Combinación de múltiples factores aumenta probabilidad de enfermedad
+- Modelo útil para triaje inicial y referencia a especialista
+

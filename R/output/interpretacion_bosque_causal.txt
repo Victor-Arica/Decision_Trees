@@ -1,0 +1,41 @@
+INTERPRETACIÓN DE RESULTADOS - PARTE 2: BOSQUE CAUSAL
+==========================================================
+
+1. VARIABLES DE TRATAMIENTO Y RESULTADO:
+- Tratamiento T: 144 individuos tratados (48.5%)
+- Resultado Y: media = 15.24, SD = 15.41
+
+2. EFECTO DEL TRATAMIENTO (OLS):
+- Coeficiente T (efecto promedio): 30.407
+- Significancia estadística: p = 0
+- R-cuadrado del modelo: 0.9823
+
+3. RANDOM FOREST:
+- Varianza explicada: 96.9%
+- MSE final: 7.4311
+
+4. VARIABLES MÁS IMPORTANTES:
+- Top 5 variables por importancia:
+  1. T 
+  2. restbp 
+  3. age 
+  4. exang 
+  5. thalach 
+
+5. INTERPRETACIÓN ÁRBOL REPRESENTATIVO:
+- Primer split: T
+- Variables clave en árbol: T, <leaf>, restbp
+- Captura heterogeneidad en respuesta al tratamiento
+
+6. HEATMAP POR TERCIES DE EFECTO:
+- Tercil bajo: efecto predicho < 0.82
+- Tercil medio: efecto entre 0.82 y 28.99
+- Tercil alto: efecto > 28.99
+- Patrones en covariables revelan subgrupos con diferente respuesta
+
+7. CONCLUSIONES CAUSALES:
+- El tratamiento tiene efecto positivo promedio de 30.407
+- Existe heterogeneidad significativa en efectos del tratamiento
+- Variables como T y restbp moderan los efectos
+- Subgrupos identificados podrían beneficiarse de intervenciones personalizadas
+
